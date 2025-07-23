@@ -20,6 +20,13 @@
 				height: 70px;
 			}
 
+			#header nav {
+				display: flex; /* Use flexbox for the navbar */
+				justify-content: space-between; /* Space between logo and menu */
+				align-items: center; /* Center items vertically */
+				height: 100%; /* Full height of the header */
+			}
+
 			#header img {
 				max-width: 100%; /* Ensure the logo is responsive */
 				height: auto; /* Maintain aspect ratio */
@@ -39,10 +46,13 @@
 				font-weight: bold;
 				
 				/* Box size is the text size */
-				padding: 10px 20px; /* Padding for better appearance */
+				padding: 0px 20px;
 				text-align: center; /* Center the text */
 				display: inline-block; /* Make the div fit the content */
-				margin-top: 4px; /* Add some space above the button */
+			}
+
+			#header nav #appointment {
+				margin-left: 20px;
 			}
 
 			#appointment a {
@@ -61,6 +71,7 @@
 			.logo {
 				max-width: 100%; /* Ensure the logo is responsive */
 				height: auto; /* Maintain aspect ratio */
+				margin-top: 30px;
 			}
 
 			#servicios, #sobre-nosotros {
@@ -130,8 +141,34 @@
 
 			/* Handle navbar to make it responsive with an accordion effect and ensure no other media query applies */
 			@media (max-width: 1000px) {
-				#header nav {
+				#header nav ul {
 					display: none; /* Hide the navbar by default */
+				}
+
+				#header nav {
+					margin-left: auto;
+					margin-right: auto;
+					width: 100%; /* Full width for the header */
+					justify-content: center; /* Center the logo and menu */
+				}
+
+				#appointment {
+					margin-top: 30px; /* Adjust margin for the appointment button */
+					width: 30%; /* Adjust width for smaller screens */
+					padding: 10px;
+					margin-left: 0;
+					min-width: 300px;
+				}
+
+				#appointment a {
+					font-size: 25px; /* Adjust font size for smaller screens */
+				}
+
+				#header nav #appointment {
+					margin-left: 0; /* Remove left margin for the appointment button */
+					margin-right: -18px;
+					padding: 5px 5px; /* Adjust padding for smaller screens */
+					margin-top: 45px;
 				}
 
 				/* Center the logo in the header */
@@ -141,31 +178,13 @@
 					display: block; /* Center the logo */
 				}
 
-				/* Add a button to appointment after the logo */
-				#header::after {
-					content: "Agenda tu cita ya";
-					display: block;
-					font-weight: bold; /* Make the text bold */
-					background-color: #AF8B4A; /* Gold background for the button */
-					color: #fff; /* White text color */
-					padding: 10px 20px; /* Padding for the button */
-					text-align: center; /* Center the text */
-					border-radius: 5px; /* Rounded corners */
-					margin-top: 20px; /* Space above the button */
-					margin-bottom: 20px; /* Space below the button */
-					cursor: pointer; /* Change cursor to pointer */
-					text-decoration: none; /* Remove underline from link */
-					transition: background-color 0.3s; /* Smooth transition for background color */
-					margin-left: 20px; /* Add some space to the left */
-					margin-right: 20px; /* Add some space to the right */
-					font-size: 25px; /* Adjust font size */
-				}
-
 				#header {
 					background-color: #212529; /* Dark background for the header */
 					color: #fff; /* Light text color */
-					height: 150px;
+					height: 120px;
 				}
+
+
 			}
 
 			/* For screen sizes shorter than 1120px display the services header and content in a single column */
@@ -211,15 +230,11 @@
 					<li><a href="#horarios">Horarios</a></li>
 					<li><a href="#sobre-nosotros">Sobre nosotros</a></li>
 					<li><a href="#contactos">Contacto</a></li>
-
-					<li>
-						<div id="appointment">
-
-							<!-- TODO -->
-							<a href="#">Agenda tu cita ya</a>
-						</div>
-					</li>
 				</ul>
+				<div id="appointment">
+					<!-- TODO -->
+					<a href="#">Agenda tu cita ya</a>
+				</div>
 			</nav>
 		</header>
 
@@ -371,8 +386,8 @@
 					<a href="https://wa.me/3156672254" class="button style2">Contactar por WhatsApp</a>
 					<p>O visitanos en nuestras redes sociales</p>
 					<div class="social-links">
-						<a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
-						<a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+						<a href="https://www.facebook.com/people/Arte-en-tus-u%C3%B1as-Armenia/100069353239986/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+						<a href="https://www.instagram.com/arte_en_tus_unas_armenia_/" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
 						<a href="https://wa.me/3156672254" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a>
 					</div>
 				</main>
@@ -383,9 +398,11 @@
 
 		<!-- Icons -->
 			<ul class="icons">
-				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+				<li><a href="https://www.facebook.com/people/Arte-en-tus-u%C3%B1as-Armenia/100069353239986/" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="https://www.instagram.com/arte_en_tus_unas_armenia_/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="https://wa.me/3156672254" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+
+				<!--TODO-->
 				<li><a href="#" class="fa fa-calendar"><span class="label"></span></a></li>
 			</ul>
 
