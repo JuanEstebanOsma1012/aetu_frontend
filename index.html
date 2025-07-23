@@ -1,0 +1,367 @@
+<!DOCTYPE HTML>
+<!--
+	Big Picture by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Arte en tus Uñas</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+			/* Custom background color for the header */
+			#header {
+				background-color: #212529; /* Dark background for the header */
+				color: #fff; /* Light text color */
+				height: 70px;
+			}
+
+			#header img {
+				max-width: 100%; /* Ensure the logo is responsive */
+				height: auto; /* Maintain aspect ratio */
+				margin-top: 21px;
+				margin-left: 15px; /* Adjust margin to position the logo */
+			}
+
+			li #appointment {
+				padding: 0;
+			}
+
+			/* Custom styles for appointment button */
+			#appointment {
+				background-color: #AF8B4A; /* Gold background color */
+				color: #fff; /* Black text color */
+				border-radius: 5px; /* Rounded corners */
+				font-weight: bold;
+				
+				/* Box size is the text size */
+				padding: 10px 20px; /* Padding for better appearance */
+				text-align: center; /* Center the text */
+				display: inline-block; /* Make the div fit the content */
+			}
+
+			#appointment a {
+				color: #fff; /* Ensure the link text is black */
+				text-decoration: none; /* Remove underline from link */
+				font-weight: bold;
+			}
+
+			#inicio, #horarios{
+				background: none;
+				background-color: #212529; /* Dark background for the intro section */
+				color: #fff; /* Light text color for contrast */
+			}
+
+			.logo {
+				max-width: 100%; /* Ensure the logo is responsive */
+				height: auto; /* Maintain aspect ratio */
+			}
+
+			#servicios, #sobre-nosotros {
+				/* Light background for the services section */
+				background-color: #AF8B4A; /* Light background for the services section */
+				color: #212529; /* Dark text color for contrast */
+			}
+
+			.collage {
+				margin: 30px; /* Center the collage */
+				width: 100%;
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+				gap: 40px; /* Space between grid items */
+			}
+
+			/* Center vertically the .collage children */
+			.collage .service {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+
+			.service {
+				background-color: #fff; /* White background for each service */
+				padding: 20px; /* Padding inside each service box */
+				text-align: center; /* Center the text */
+				box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+			}
+
+			#servicios-header {
+				margin-left: 40px;
+			}
+
+			#contactos .content a {
+				background-color: #212529; /* Gold background for the contact button */
+				color: #fff; /* White text color */
+				border-radius: 5px; /* Rounded corners */
+				text-decoration: none; /* Remove underline from link */
+				font-weight: bold; /* Make the text bold */
+				margin-bottom: 50px;
+			}
+
+			.social-links {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-top: 30px;
+				gap: 20px; /* Space between social media icons */
+			}
+
+			.social-links a {
+				/* Increase the size of the social media icons */
+				font-size: 50px; /* Adjust size as needed */
+
+				padding: 10px;
+				color: #212529;
+				text-decoration: none;
+			}
+
+			#map {
+				width: 100%;
+				height: 600px; /* Adjust height as needed */
+				border-radius: 10px; /* Rounded corners for the map */
+				margin: 50px;
+			}
+
+			/* Handle navbar to make it responsive with an accordion effect and ensure no other media query applies */
+			@media (max-width: 1000px) {
+				#header nav {
+					display: none; /* Hide the navbar by default */
+				}
+			}
+
+			/* For screen sizes shorter than 1120px display the services header and content in a single column */
+			/* Remember all services section is a flexbox with a grid layout inside */
+			@media (max-width: 1120px) {
+				#servicios-header {
+					display: none;
+				}
+
+				/* Make a new element to display the services header before the first service with before pseudo-element */
+				.collage::before {
+					content: "Servicios";
+					display: block; /* Make it a block element */
+					font-size: 2em; /* Adjust font size as needed */
+					text-align: center; /* Center the header text */
+					margin-bottom: 20px; /* Space below the header */
+					grid-column: 1 / -1; /* Ocupa todo el ancho del grid */
+					color: #39454B; /* Dark text color for contrast */
+					font-weight: bold; /* Make the header bold */
+					background-color: #fff; /* Light background for the header */
+					padding: 20px; /* Padding for the header */
+					border-radius: 10px; /* Rounded corners for the header */
+				}
+			}
+
+		</style>
+
+	</head>
+	<body class="is-preload">
+
+		<header id="header">
+			<img src="images/personal/Nombre Transparente Small.png" alt="Nombre empresarial">
+			<nav>
+				<ul>
+					<li><a href="#inicio">Inicio</a></li>
+					<!--<li><a href="#galeria">Galeria</a></li>-->
+					<li><a href="#servicios">Servicios</a></li>
+					<li><a href="#horarios">Horarios</a></li>
+					<li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+					<li><a href="#contactos">Contacto</a></li>
+
+					<li>
+						<div id="appointment">
+
+							<!-- TODO -->
+							<a href="#">Agenda tu cita ya</a>
+						</div>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="inicio" class="main style1 dark fullscreen">
+			<div class="content">
+				<header>
+					<img src="images/personal/Logo Fondo Transparente Medium.png" class="logo" alt="Logo empresarial">
+				</header>
+
+				<div id="appointment">
+					<!-- TODO -->
+					<a href="#">Agenda tu cita ya</a>
+				</div>
+				<footer>
+					<a href="#servicios" class="button style2 down">More</a>
+				</footer>
+			</div>
+		</section>
+
+		<section id="servicios" class="main style2 right dark fullscreen">
+			<!-- Content to display on left side with the information about services -->
+			<div class="collage">
+				<div class="service first-service">
+					<p><b>Tradicional en manos</b></p>
+					<p>$20.000</p>
+				</div>
+				<div class="service">
+					<p><b>Tradicional en pies</b></p>
+					<p>$20.000</p>
+				</div>
+				<div class="service">
+					<p><b>Semipermanente en manos</b></p>
+					<p>$40.000</p>
+				</div>
+				<div class="service">
+					<p><b>Semipermanente en pies</b></p>
+					<p>$40.000</p>
+				</div>
+				<div class="service">
+					<p><b>Dipping</b></p>
+					<p>$60.000</p>
+				</div>
+				<div class="service">
+					<p><b>Capping</b></p>
+					<p>$60.000</p>
+				</div>
+				<div class="service">
+					<p><b>Poly Gel</b></p>
+					<p>$75.000</p>
+				</div>
+				<div class="service">
+					<p><b>Press On</b></p>
+					<p>$80.000</p>
+				</div>
+				<div class="service">
+					<p><b>Forrado en acrilico</b></p>
+					<p>$75.000</p>
+				</div>
+				<div class="service">
+					<p><b>Acrilicas esculpidas</b></p>
+					<p>$110.000</p>
+				</div>
+			</div>
+			<div id="servicios-header" class="content box style2">
+				<header>
+					<h2>Servicios</h2>
+				</header>
+				<p>Ofrecemos una variedad de servicios en pies y manos para realzar tu belleza y bienestar.</p>
+			</div>
+			<a href="#horarios" class="button style2 down anchored dark-button">Next</a>
+		</section>
+
+		<section id="horarios" class="main style2  dark fullscreen">
+			<div class="content box style2">
+				<header>
+					<h2>Horarios</h2>
+				</header>
+				<p>Atendemos todos los dias de 10:00 am a 6:00 pm</p>
+			</div>
+			<a href="#sobre-nosotros" class="button style2 down anchored">Next</a>
+		</section>
+
+		<section id="work" class="main style3 primary" style="display: none;">
+			<div class="content">
+				<header>
+					<h2>My Work</h2>
+					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
+					arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
+				</header>
+
+				<div class="gallery">
+					<article class="from-left">
+						<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
+					</article>
+					<article class="from-right">
+						<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
+					</article>
+					<article class="from-left">
+						<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a>
+					</article>
+					<article class="from-right">
+						<a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a>
+					</article>
+					<article class="from-left">
+						<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
+					</article>
+					<article class="from-right">
+						<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
+					</article>
+				</div>
+
+			</div>
+		</section>
+
+		<section id="sobre-nosotros" class="main style2 left dark fullscreen">
+			<div class="content box style2">
+				<header>
+					<h2>Sobre Nosotros</h2>
+				</header>
+				<p>Somos una empresa Colombiana ubicada en el corazón del Quindio, dedicada a realzar la belleza y bienestar de nuestros clientes a través de servicios de manicure y pedicure de alta calidad.</p>
+				<p>No te pierdas esta oportunidad de lucir unas uñas espectaculares.</p>
+				<div id="appointment">
+					<!-- TODO -->
+					<a href="#">Agenda tu cita ya</a>
+				</div>
+			</div>
+			<iframe 
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.2625538275097!2d-75.6625755!3d4.546703600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38f587aba0218b%3A0xb3ff02a9d6087196!2sArte%20en%20tus%20u%C3%B1as%20AXM!5e0!3m2!1ses-419!2sco!4v1753297346421!5m2!1ses-419!2sco" 
+				id="map"
+				style="border:0;" 
+				allowfullscreen="" 
+				loading="lazy" 
+				referrerpolicy="no-referrer-when-downgrade">
+			</iframe>
+			<a href="#contactos" class="button style2 down anchored">Next</a>
+		</section>
+
+		<section id="contactos" class="main style3 secondary">
+			<div class="content">
+				<header>
+					<h2>¿Quieres más información sobre nuestros servicios?</h2>
+					<p>Contáctanos y estaremos encantados de ayudarte.</p>
+				</header>
+				<main>
+					<a href="https://wa.me/3156672254" class="button style2">Contactar por WhatsApp</a>
+					<p>O visitanos en nuestras redes sociales</p>
+					<div class="social-links">
+						<a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+						<a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+						<a href="https://wa.me/3156672254" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a>
+					</div>
+				</main>
+			</div>
+		</section>
+
+		<footer id="footer">
+
+		<!-- Icons -->
+			<ul class="icons">
+				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon brands fa-whatsapp"><span class="label">WhatsApp</span></a></li>
+				<li><a href="#" class="fa fa-calendar"><span class="label"></span></a></li>
+			</ul>
+
+		<!-- Menu -->
+			<ul class="menu">
+				<li>&copy; Arte en tus Uñas AXM</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+
+		</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
