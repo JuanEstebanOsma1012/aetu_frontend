@@ -42,12 +42,14 @@
 				padding: 10px 20px; /* Padding for better appearance */
 				text-align: center; /* Center the text */
 				display: inline-block; /* Make the div fit the content */
+				margin-top: 4px; /* Add some space above the button */
 			}
 
 			#appointment a {
 				color: #fff; /* Ensure the link text is black */
 				text-decoration: none; /* Remove underline from link */
 				font-weight: bold;
+				font-size: 20px; /* Adjust font size */
 			}
 
 			#inicio, #horarios{
@@ -114,7 +116,7 @@
 				/* Increase the size of the social media icons */
 				font-size: 50px; /* Adjust size as needed */
 
-				padding: 10px;
+				padding: 15px;
 				color: #212529;
 				text-decoration: none;
 			}
@@ -131,28 +133,66 @@
 				#header nav {
 					display: none; /* Hide the navbar by default */
 				}
+
+				/* Center the logo in the header */
+				#header img {
+					margin-left: auto;
+					margin-right: auto;
+					display: block; /* Center the logo */
+				}
+
+				/* Add a button to appointment after the logo */
+				#header::after {
+					content: "Agenda tu cita ya";
+					display: block;
+					font-weight: bold; /* Make the text bold */
+					background-color: #AF8B4A; /* Gold background for the button */
+					color: #fff; /* White text color */
+					padding: 10px 20px; /* Padding for the button */
+					text-align: center; /* Center the text */
+					border-radius: 5px; /* Rounded corners */
+					margin-top: 20px; /* Space above the button */
+					margin-bottom: 20px; /* Space below the button */
+					cursor: pointer; /* Change cursor to pointer */
+					text-decoration: none; /* Remove underline from link */
+					transition: background-color 0.3s; /* Smooth transition for background color */
+					margin-left: 20px; /* Add some space to the left */
+					margin-right: 20px; /* Add some space to the right */
+					font-size: 25px; /* Adjust font size */
+				}
+
+				#header {
+					background-color: #212529; /* Dark background for the header */
+					color: #fff; /* Light text color */
+					height: 150px;
+				}
 			}
 
 			/* For screen sizes shorter than 1120px display the services header and content in a single column */
 			/* Remember all services section is a flexbox with a grid layout inside */
 			@media (max-width: 1120px) {
-				#servicios-header {
-					display: none;
+				#servicios {
+					flex-direction: column; /* Stack the content vertically */
+					align-items: center; /* Center the content */
+					padding: 30px;
 				}
 
-				/* Make a new element to display the services header before the first service with before pseudo-element */
-				.collage::before {
-					content: "Servicios";
-					display: block; /* Make it a block element */
-					font-size: 2em; /* Adjust font size as needed */
-					text-align: center; /* Center the header text */
-					margin-bottom: 20px; /* Space below the header */
-					grid-column: 1 / -1; /* Ocupa todo el ancho del grid */
-					color: #39454B; /* Dark text color for contrast */
-					font-weight: bold; /* Make the header bold */
-					background-color: #fff; /* Light background for the header */
-					padding: 20px; /* Padding for the header */
-					border-radius: 10px; /* Rounded corners for the header */
+				#servicios-header {
+					margin-left: 0px;
+					margin-bottom: 30px; /* Add some space below the header */
+					order: 1; /* Move the header above the collage */
+				}
+
+				.collage {
+					order: 2; /* Move the collage below the header */
+					margin-bottom: 60px;
+				}
+			}
+
+			@media (max-width: 736px) {
+				#sobre-nosotros {
+					flex-direction: column; /* Stack the content vertically */
+					align-items: center; /* Center the content */
 				}
 			}
 
@@ -200,6 +240,7 @@
 		</section>
 
 		<section id="servicios" class="main style2 right dark fullscreen">
+
 			<!-- Content to display on left side with the information about services -->
 			<div class="collage">
 				<div class="service first-service">
@@ -243,12 +284,14 @@
 					<p>$110.000</p>
 				</div>
 			</div>
+
 			<div id="servicios-header" class="content box style2">
 				<header>
 					<h2>Servicios</h2>
 				</header>
 				<p>Ofrecemos una variedad de servicios en pies y manos para realzar tu belleza y bienestar.</p>
 			</div>
+
 			<a href="#horarios" class="button style2 down anchored dark-button">Next</a>
 		</section>
 
@@ -353,15 +396,14 @@
 
 		</footer>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.poptrox.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
