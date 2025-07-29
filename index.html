@@ -30,8 +30,12 @@
 			#header img {
 				max-width: 100%; /* Ensure the logo is responsive */
 				height: auto; /* Maintain aspect ratio */
-				margin-top: 21px;
-				margin-left: 15px; /* Adjust margin to position the logo */
+				margin-left: -20px; /* Add some space on the left */
+				margin-top: 15px;
+
+				/* Resize the logo for smaller screens */
+				width: 400px; /* Adjust width as needed */
+				height: auto; /* Maintain aspect ratio */
 			}
 
 			li #appointment {
@@ -140,7 +144,7 @@
 			}
 
 			/* Handle navbar to make it responsive with an accordion effect and ensure no other media query applies */
-			@media (max-width: 1000px) {
+			@media (max-width: 1150px) {
 				#header nav ul {
 					display: none; /* Hide the navbar by default */
 				}
@@ -221,18 +225,17 @@
 	<body class="is-preload">
 
 		<header id="header">
-			<img src="images/personal/Nombre Transparente Small.png" alt="Nombre empresarial">
+			<img src="images/personal/82691577.png" alt="Nombre empresarial">
 			<nav>
 				<ul>
 					<li><a href="#inicio">Inicio</a></li>
-					<!--<li><a href="#galeria">Galeria</a></li>-->
-					<li><a href="#servicios">Servicios</a></li>
-					<li><a href="#horarios">Horarios</a></li>
+					<li><a href="#galeria">Galeria</a></li>
 					<li><a href="#sobre-nosotros">Sobre nosotros</a></li>
+					<li><a href="#horarios">Horarios</a></li>
+					<li><a href="#servicios">Servicios</a></li>
 					<li><a href="#contactos">Contacto</a></li>
 				</ul>
 				<div id="appointment">
-					<!-- TODO -->
 					<a href="https://calendar.arteentusunasaxm.com/" target="_blank">Agenda tu cita ya</a>
 				</div>
 			</nav>
@@ -245,13 +248,91 @@
 				</header>
 
 				<div id="appointment">
-					<!-- TODO -->
 					<a href="https://calendar.arteentusunasaxm.com/" target="_blank">Agenda tu cita ya</a>
 				</div>
 				<footer>
-					<a href="#servicios" class="button style2 down">More</a>
+					<a href="#galeria" class="button style2 down">More</a>
 				</footer>
 			</div>
+		</section>
+
+		<section id="galeria" class="main style3 primary">
+			<div class="content">
+				<header>
+					<h2>Galeria</h2>
+					<!--<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
+					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
+					arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>-->
+				</header>
+
+				<div class="gallery">
+					<article class="from-left">
+						<a href="images/fulls/IMG_9413.JPG" class="image fit"><img src="images/thumbs/IMG_9413.jpg" title="🎀🎀" alt="" /></a>
+					</article>
+					<article class="from-right">
+						<a href="images/fulls/IMG_9406.JPG" class="image fit"><img src="images/thumbs/IMG_9406.jpg" title="💙💙" alt="" /></a>
+					</article>
+					<article class="from-left">
+						<a href="images/fulls/IMG_9407.JPG" class="image fit"><img src="images/thumbs/IMG_9407.jpg" title="🌫🌫" alt="" /></a>
+					</article>
+					<article class="from-right">
+						<a href="images/fulls/IMG_9408.JPG" class="image fit"><img src="images/thumbs/IMG_9408.jpg" title="💕💕" alt="" /></a>
+					</article>
+					<article class="from-left">
+						<a href="images/fulls/IMG_9405.JPG" class="image fit"><img src="images/thumbs/IMG_9405.jpg" title="✨🌟" alt="" /></a>
+					</article>
+					<article class="from-right">
+						<a href="images/fulls/IMG_9410.JPG" class="image fit"><img src="images/thumbs/IMG_9410.jpg" title="💓💓" alt="" /></a>
+					</article>
+					<article class="from-left">
+						<a href="images/fulls/IMG_9411.JPG" class="image fit"><img src="images/thumbs/IMG_9411.jpg" title="💅💅" alt="" /></a>
+					</article>
+					<article class="from-right">
+						<a href="images/fulls/IMG_9412.JPG" class="image fit"><img src="images/thumbs/IMG_9412.jpg" title="💋💋" alt="" /></a>
+					</article>
+					<article class="from-left">
+						<a href="images/fulls/IMG_9409.JPG" class="image fit"><img src="images/thumbs/IMG_9409.jpg" title="💟💟" alt="" /></a>
+					</article>
+					<article class="from-right">
+						<a href="images/fulls/IMG_9414.JPG" class="image fit"><img src="images/thumbs/IMG_9414.jpg" title="🌺🔴" alt="" /></a>
+					</article>
+				</div>
+
+			</div>
+
+			<a href="#sobre-nosotros" class="button style2 down anchored dark-button">Next</a>
+		</section>
+
+		<section id="sobre-nosotros" class="main style2 left dark fullscreen">
+			<div class="content box style2">
+				<header>
+					<h2>Sobre Nosotros</h2>
+				</header>
+				<p>Somos una empresa Colombiana ubicada en el corazón del Quindio, dedicada a realzar la belleza y bienestar de nuestros clientes a través de servicios de manicure y pedicure de alta calidad.</p>
+				<p>No te pierdas esta oportunidad de lucir unas uñas espectaculares.</p>
+				<div id="appointment">
+					<a href="https://calendar.arteentusunasaxm.com/" target="_blank">Agenda tu cita ya</a>
+				</div>
+			</div>
+			<iframe 
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.2625538275097!2d-75.6625755!3d4.546703600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38f587aba0218b%3A0xb3ff02a9d6087196!2sArte%20en%20tus%20u%C3%B1as%20AXM!5e0!3m2!1ses-419!2sco!4v1753297346421!5m2!1ses-419!2sco" 
+				id="map"
+				style="border:0;" 
+				allowfullscreen="" 
+				loading="lazy" 
+				referrerpolicy="no-referrer-when-downgrade">
+			</iframe>
+			<a href="#horarios" class="button style2 down anchored">Next</a>
+		</section>
+
+		<section id="horarios" class="main style2  dark fullscreen">
+			<div class="content box style2">
+				<header>
+					<h2>Horarios</h2>
+				</header>
+				<p>Atendemos todos los dias de 10:00 am a 6:00 pm</p>
+			</div>
+			<a href="#servicios" class="button style2 down anchored">Next</a>
 		</section>
 
 		<section id="servicios" class="main style2 right dark fullscreen">
@@ -307,73 +388,7 @@
 				<p>Ofrecemos una variedad de servicios en pies y manos para realzar tu belleza y bienestar.</p>
 			</div>
 
-			<a href="#horarios" class="button style2 down anchored dark-button">Next</a>
-		</section>
-
-		<section id="horarios" class="main style2  dark fullscreen">
-			<div class="content box style2">
-				<header>
-					<h2>Horarios</h2>
-				</header>
-				<p>Atendemos todos los dias de 10:00 am a 6:00 pm</p>
-			</div>
-			<a href="#sobre-nosotros" class="button style2 down anchored">Next</a>
-		</section>
-
-		<section id="work" class="main style3 primary" style="display: none;">
-			<div class="content">
-				<header>
-					<h2>My Work</h2>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-					arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
-				</header>
-
-				<div class="gallery">
-					<article class="from-left">
-						<a href="images/fulls/01.jpg" class="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
-					</article>
-					<article class="from-right">
-						<a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
-					</article>
-					<article class="from-left">
-						<a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a>
-					</article>
-					<article class="from-right">
-						<a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a>
-					</article>
-					<article class="from-left">
-						<a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
-					</article>
-					<article class="from-right">
-						<a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
-					</article>
-				</div>
-
-			</div>
-		</section>
-
-		<section id="sobre-nosotros" class="main style2 left dark fullscreen">
-			<div class="content box style2">
-				<header>
-					<h2>Sobre Nosotros</h2>
-				</header>
-				<p>Somos una empresa Colombiana ubicada en el corazón del Quindio, dedicada a realzar la belleza y bienestar de nuestros clientes a través de servicios de manicure y pedicure de alta calidad.</p>
-				<p>No te pierdas esta oportunidad de lucir unas uñas espectaculares.</p>
-				<div id="appointment">
-					<!-- TODO -->
-					<a href="https://calendar.arteentusunasaxm.com/" target="_blank">Agenda tu cita ya</a>
-				</div>
-			</div>
-			<iframe 
-				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.2625538275097!2d-75.6625755!3d4.546703600000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38f587aba0218b%3A0xb3ff02a9d6087196!2sArte%20en%20tus%20u%C3%B1as%20AXM!5e0!3m2!1ses-419!2sco!4v1753297346421!5m2!1ses-419!2sco" 
-				id="map"
-				style="border:0;" 
-				allowfullscreen="" 
-				loading="lazy" 
-				referrerpolicy="no-referrer-when-downgrade">
-			</iframe>
-			<a href="#contactos" class="button style2 down anchored">Next</a>
+			<a href="#contactos" class="button style2 down anchored dark-button">Next</a>
 		</section>
 
 		<section id="contactos" class="main style3 secondary">
@@ -396,17 +411,13 @@
 
 		<footer id="footer">
 
-		<!-- Icons -->
 			<ul class="icons">
 				<li><a href="https://www.facebook.com/people/Arte-en-tus-u%C3%B1as-Armenia/100069353239986/" class="icon brands fa-facebook-f" target="_blank"><span class="label">Facebook</span></a></li>
 				<li><a href="https://www.instagram.com/arte_en_tus_unas_armenia_/" class="icon brands fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
 				<li><a href="https://wa.me/message/V3NTKM6GNXIGP1?src=qr" class="icon brands fa-whatsapp" target="_blank"><span class="label">WhatsApp</span></a></li>
-
-				<!--TODO-->
 				<li><a href="https://calendar.arteentusunasaxm.com/" class="fa fa-calendar" target="_blank"><span class="label"></span></a></li>
 			</ul>
 
-		<!-- Menu -->
 			<ul class="menu">
 				<li>&copy; Arte en tus Uñas AXM</li><li>Design: <a href="https://html5up.net" target="_blank">HTML5 UP</a></li>
 			</ul>
